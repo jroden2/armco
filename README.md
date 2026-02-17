@@ -65,13 +65,13 @@ use `fromString` with a text block. If you prefer prompts to live separately fro
 and be swappable without recompiling, use `fromClasspath`.
 ```java
 // Classpath file
-GuardrailsClient client = new GuardrailsClient(
+ArmcoClient client = new ArmcoClient(
     provider,
     PromptTemplateSource.fromClasspath("/prompts/metadata_extraction.txt")
 );
 
 // Inline string
-GuardrailsClient client = new GuardrailsClient(
+ArmcoClient client = new ArmcoClient(
     provider,
     PromptTemplateSource.fromString("""
         You are a metadata extraction engine.
