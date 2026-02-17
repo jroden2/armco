@@ -60,6 +60,29 @@ relying on keyword blocklists.
 | Classpath file | `PromptTemplateSource.fromClasspath(path)` |
 | Inline string | `PromptTemplateSource.fromString(template)` |
 
+If your team prefers prompt changes to be visible in code review alongside the Java that uses them,
+use `fromString` with a text block. If you prefer prompts to live separately from application code
+and be swappable without recompiling, use `fromClasspath`.
+```java
+// Classpath file
+GuardrailsClient client = new GuardrailsClient(
+    provider,
+    PromptTemplateSource.fromClasspath("/prompts/metadata_extraction.txt")
+);
+
+// Inline string
+GuardrailsClient client = new GuardrailsClient(
+    provider,
+    PromptTemplateSource.fromString("""
+        You are a metadata extraction engine.
+        ...
+        {FIELDS}
+        {FORMAT}
+        {SCHEMA}
+        {CONTENT}
+        """)
+);
+```
 ---
 
 ## Quick Start
