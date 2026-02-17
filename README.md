@@ -118,7 +118,7 @@ LlmProvider provider = prompt -> {
 
 ### 3. Build the client
 ```java
-GuardrailsClient client = new GuardrailsClient(
+ArmcoClient client = new ArmcoClient(
     provider,
     PromptTemplateSource.fromClasspath("/prompts/metadata_extraction.txt")
 );
@@ -170,8 +170,8 @@ public class ArmcoConfig {
     }
 
     @Bean
-    public GuardrailsClient guardrailsClient(LlmProvider llmProvider) {
-        return new GuardrailsClient(
+    public ArmcoClient armcoClient(LlmProvider llmProvider) {
+        return new ArmcoClient(
             llmProvider,
             PromptTemplateSource.fromClasspath("/prompts/metadata_extraction.txt")
         );
