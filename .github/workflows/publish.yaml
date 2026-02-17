@@ -11,6 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set version from tag
+        run: |
+          VERSION=${GITHUB_REF_NAME#v}
+          mvn versions:set -DnewVersion=$VERSION -DgenerateBackupPoms=false
+
       - uses: actions/setup-java@v4
         with:
           java-version: '17'
