@@ -4,6 +4,10 @@ LLM-agnostic guardrails for structured content extraction. Define your fields, s
 format. armco handles prompt construction, input sanitization, and LLM communication. Swap models
 without changing your application code.
 
+## Example repository:
+[Here's](https://github.com/jroden2/llm-demo) an example which allows you to see the implementation structure as I expect it to be used.
+
+
 ## Requirements
 
 - Java 17+
