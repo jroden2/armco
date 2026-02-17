@@ -14,7 +14,7 @@ without changing your application code.
 <dependency>
     <groupId>io.github.jroden2</groupId>
     <artifactId>armco</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.7</version>
 </dependency>
 ```
 
